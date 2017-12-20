@@ -10,14 +10,7 @@ import {HeroService} from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
 
-  selectedHero: Hero;
-
   heroes: Hero[];
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.heroService.addNewMsg('Add New Hero with name:' + this.selectedHero.name);
-  }
 
   constructor(private heroService: HeroService) {
   }
